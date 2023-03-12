@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <td>Username</td>
-            <td><input type="text" placeholder="Enter Username" id="user"></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="text" placeholder="Enter Email Address" id="email"></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="text" placeholder="Enter Password" id="pass"></td>
-        </tr>
-        <tr>
-            <td>Confirm Password</td>
-            <td><input type="text" placeholder="Confirm Password" id="confirm"></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Create" onClick="sign_up()"></td>
-        </tr>
-    </table>
+    <div class="container">
+    <h1>Be a <span>thinker</span> now</h1>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" placeholder="Enter Username" id="user"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" placeholder="Enter Email Address" id="email"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" placeholder="Enter Password" id="pass"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="text" placeholder="Confirm Password" id="confirm"></td>
+            </tr>
+        </table>
+        <div class="submit_box">
+            <input type="submit" value="Register" onClick="sign_up()">
+        </div>
+    </div>
     <script type="text/javascript">
         function sign_up(){
             var user=document.getElementById("user").value;
