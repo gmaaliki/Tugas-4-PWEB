@@ -4,9 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" placeholder="Enter Username" id="user"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" placeholder="Enter Email Address" id="email"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" placeholder="Enter Password" id="pass"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type="text" placeholder="Confirm Password" id="confirm"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Create" onClick="sign_up()"></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function sign_up(){
+            var user=document.getElementById("user").value;
+            var email=document.getElementById("email").value;
+            var pass=document.getElementById("pass").value;
+            var confirm=document.getElementById("confirm").value;
+
+            var letters=/^[A-Za-z]+$/;
+            var email_val=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2, 4})+$/;
+
+            if(user==''||email==''||pass==''||confirm==''){
+                alert("Details cannot be blank");
+            }else if(!letters.test(name)){
+                alert("Name is incorrect must contain alphabets only");
+            }else if(!email_val.test(email)){
+                alert("Invalid email format please enter valid email id");
+            }else if(password!=confirm){
+                alert("Password not matching");
+            }else if(document.getElementById("pass").value.length>12){
+                alert("Password maximum length is 12");
+            }else if(document.getElementById("pass").value.length<6){
+                alert("Password minimum length is 6");
+            }else{
+                alert("Your account has been created successfully");
+            }
+        }
+    </script>
 </body>
 </html>
